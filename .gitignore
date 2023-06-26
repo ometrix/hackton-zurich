@@ -175,3 +175,5 @@ cython_debug/
 
 # Mis documentos privados
 *.priv
+
+*.lock.hcl
