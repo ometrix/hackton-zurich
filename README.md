@@ -22,6 +22,8 @@ After this we have started with the declaration of the infrastructure in the mai
 
 After testing in local and AWS it was noticed that for it to work in local it was required that the lambda function had specified which endpoint should be used to try to use the default of aws, that is why in the lambda function it was decided to add a conditional at the beginning that if it detects a specific environment variable in the container that runs it determines whether it is in local or in AWS and use the appropriate settings for each one.
 
+This is how this solution can be used in test environments or in AWS itself.
+
 ## Espaniol
 ---
 
@@ -44,3 +46,5 @@ En este proceso he iniciado realizando la funcion lambda, creado esta funcion y 
 Luego de esto se ha iniciado con la declaracion de la infraestructura en el archivo main.tf, para esto hemos considerado politicas y accesos segun lo que se necesita para cada recurso de esta manera la funcion lambda solo tiene la posibilidad de leer del bucket de S3 mas no de escribir, pero si posee permisos de lectura y escritura en la tabla de dynamodb
 
 Luego de realizar prueba en local como en AWS se noto que para que funcione en local se requeria que la funcion lambda tuviera espeficado que endpoint debia usar para que intentara usar el por defecto de aws, es por ello que en la funcionn lambda se decide agregar un condicional al inicio que si detecta una varia de entorno especifica en el contendor que la ejecuta esta determine si esta en local o en AWS y use la configuracion adecuada para cada una.
+
+Es asi como esta solucion puede ser utilizada en entornos de prueba o en el propio AWS
